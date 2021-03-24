@@ -1,18 +1,20 @@
-QWidget{
+#container{
 	background-color: #292a2d;
+	border: 1px solid;
+	border-color: #304d4a;
 }
 
 #title_label{
 	background-color: transparent;
-	color: rgb(212, 214, 217, 1);
+	color: rgb(191, 192, 194);
 	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
-	font-size: 20px;
+	font-size: 16px;
 }
 
 #toolbar{
 	background-color: #1c1c1c;
-	border-bottom: 1px solid;
-	border-bottom-color: #304d4a;
+	border: 1px solid;
+	border-color: #304d4a;
 }
 
 #footer{

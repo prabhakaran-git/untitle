@@ -7,52 +7,47 @@ import os
 class MainWindow(Widgets.QWidget):
     
     def __init__(self):
-        
         super().__init__()
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint) 
         self.setWindowTitle("PyTube Download")
         self.dragPos = QtCore.QPoint()
         self.initUI()
         
-        
     def initUI(self) -> None:
-       
         self._set_window_geometry()
-        self.container = Widgets.QFrame(self)
+        self.cotainer = Widgets.QFrame(self)
+        self.cotainer.setObjectName('container')
+        self.content = Widgets.QFrame(self.cotainer)
         self._toolbar_ui()
-        self.container.resize(self.width(), 15 + self.height() - self.toolbar.height())
-        self.container.move(0, self.toolbar.height())
+        self.content.resize(self.width(), 15 + self.height() - self.toolbar.height())
+        self.content.move(0, self.toolbar.height())
         self._footer_ui()
         self._load_style_sheet()
         
     def _toolbar_ui(self):
-        self.toolbar = Widgets.QFrame(self)
+        self.toolbar = Widgets.QFrame(self.cotainer)
         self.toolbar.setObjectName("toolbar")
-        self.toolbar.resize(self.width(), 65)
+        self.toolbar.resize(self.width(), 45)
         self.toolbar.mouseMoveEvent = self._toolbar_mouse_move_event
         self.toolbar.mousePressEvent = self._toolbar_mouse_press_event
         title_label = Widgets.QLabel('[ PyTube Downloader ]', self.toolbar)
         title_label.setObjectName('title_label')
-        title_label.move(20, 15)
-        
-        
+        title_label.resize(int(self.width()*0.2), self.toolbar.height())
+        title_label.move(10, 0)
+        title_label.setAlignment(QtCore.Qt.AlignCenter)
+
     def _footer_ui(self):
-        self.footer = Widgets.QFrame(self)
+        self.footer = Widgets.QFrame(self.cotainer)
         self.footer.setObjectName("footer")
-        self.footer.resize(self.width(), self.height() - self.container.height())
-        self.footer.move(0, self.container.height())
-        
+        self.footer.resize(self.width(), self.height() - self.content.height())
+        self.footer.move(0, self.content.height())
         
     def _load_style_sheet(self) -> None:
-       
         file_path = os.path.join(os.path.dirname(__file__), 'styles.css')
         with open(file_path, 'r') as file:
             self.setStyleSheet(file.read())
     
     def _set_window_geometry(self) -> None:
-        """
-        Return the current desktop screen width and height
-        """
         size = Widgets.QApplication.primaryScreen().size()
         width, height = int(size.width() * 0.62), int(size.height() * 0.86)
         x, y = int(size.width() * 0.17), int(size.height() * 0.04)
