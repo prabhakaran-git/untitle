@@ -1,7 +1,21 @@
 QWidget{
-	background-color: #222831;	
+	background-color: #292a2d;
 }
 
-#toolbar_frame{
-	background-color: #2b1f31;
+#title_label{
+	background-color: transparent;
+	color: rgb(212, 214, 217, 1);
+	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
+	font-size: 20px;
+}
+
+#toolbar{
+	background-color: #1c1c1c;
+	border-bottom: 1px solid;
+	border-bottom-color: #304d4a;
+}
+
+#footer{
+	border-top: 1px solid;
+	border-top-color: #304d4a;
 }
