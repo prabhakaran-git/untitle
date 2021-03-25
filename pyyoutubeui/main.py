@@ -30,10 +30,10 @@ class MainWindow(Widgets.QWidget):
         self.toolbar.resize(self.width(), 50)
         self.toolbar.mouseMoveEvent = self._toolbar_mouse_move_event
         self.toolbar.mousePressEvent = self._toolbar_mouse_press_event
-        title_label = Widgets.QLabel('[ PyTube Downloader ]', self.toolbar)
+        title_label = Widgets.QLabel('𒆜 PyTube Downloader 𒆜', self.toolbar)
         title_label.setObjectName('title_label')
         title_label.resize(int(self.width()*0.18), self.toolbar.height())
-        title_label.move(0, 0)
+        title_label.move(5, 0)
         title_label.setAlignment(QtCore.Qt.AlignCenter)
 
     def _footer_ui(self):
