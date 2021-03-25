@@ -49,8 +49,8 @@ class MainWindow(Widgets.QWidget):
     
     def _set_window_geometry(self) -> None:
         size = Widgets.QApplication.primaryScreen().size()
-        width, height = int(size.width() * 0.62), int(size.height() * 0.86)
-        x, y = int(size.width() * 0.17), int(size.height() * 0.04)
+        width, height = int(size.width() * 0.55), int(size.height() * 0.75)
+        x, y = int(size.width() * 0.24), int(size.height() * 0.10)
         self.setGeometry(x, y, width, height)
     
     def _toolbar_mouse_press_event(self, event): 

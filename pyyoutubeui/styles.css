@@ -8,7 +8,6 @@
 	background-color: transparent;
 	color: rgb(191, 192, 194);
 	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
-	font-size: 18px;
 }
 
 #toolbar{
@@ -20,4 +19,12 @@
 #footer{
 	border-top: 1px solid;
 	border-top-color: #304d4a;
+}
+QLineEdit{
+	background-color: #304d4a;
+	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
+	font-size: 22px;
+	border: 1px;
+	border-radius: 8px;
+	color: rgb(191, 192, 194);
 }
