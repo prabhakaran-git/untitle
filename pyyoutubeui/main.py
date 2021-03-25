@@ -19,7 +19,7 @@ class MainWindow(Widgets.QWidget):
         self.cotainer.setObjectName('container')
         self.content = Widgets.QFrame(self.cotainer)
         self._toolbar_ui()
-        self.content.resize(self.width(), 15 + self.height() - self.toolbar.height())
+        self.content.resize(self.width(), 10 + self.height() - self.toolbar.height())
         self.content.move(0, self.toolbar.height())
         self._footer_ui()
         self._load_style_sheet()
@@ -27,13 +27,13 @@ class MainWindow(Widgets.QWidget):
     def _toolbar_ui(self):
         self.toolbar = Widgets.QFrame(self.cotainer)
         self.toolbar.setObjectName("toolbar")
-        self.toolbar.resize(self.width(), 45)
+        self.toolbar.resize(self.width(), 50)
         self.toolbar.mouseMoveEvent = self._toolbar_mouse_move_event
         self.toolbar.mousePressEvent = self._toolbar_mouse_press_event
         title_label = Widgets.QLabel('[ PyTube Downloader ]', self.toolbar)
         title_label.setObjectName('title_label')
-        title_label.resize(int(self.width()*0.2), self.toolbar.height())
-        title_label.move(10, 0)
+        title_label.resize(int(self.width()*0.18), self.toolbar.height())
+        title_label.move(0, 0)
         title_label.setAlignment(QtCore.Qt.AlignCenter)
 
     def _footer_ui(self):
