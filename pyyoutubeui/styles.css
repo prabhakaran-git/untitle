@@ -1,30 +1,31 @@
 #container{
 	background-color: #292a2d;
-	border: 1px solid;
-	border-color: #304d4a;
 }
 
-#title_label{
+#app_title{
 	background-color: transparent;
-	color: rgb(191, 192, 194);
+	color: rgb(106, 190, 190);
 	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
 }
 
 #toolbar{
 	background-color: #1c1c1c;
-	border: 1px solid;
-	border-color: #304d4a;
+	border-bottom: 1px solid;
+	border-bottom-color: #304d4a;
 }
 
 #footer{
 	border-top: 1px solid;
 	border-top-color: #304d4a;
 }
-QLineEdit{
+
+#url_textbox{
 	background-color: #304d4a;
-	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;	
-	font-size: 22px;
 	border: 1px;
-	border-radius: 8px;
+	border-radius: 10px;
 	color: rgb(191, 192, 194);
+}
+
+#error{
+	color: rgba(245, 90, 90, 0.849);
 }
